@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="ARSAM Exam Lab — لابراتوار آموزشی آزمون و امنیت وب">
+  <title>ARSAM Exam Lab | پنل آزمون</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <main id="loginView" class="login-shell">
+    <section class="login-card glass">
+      <div class="brand-mark">A<span>/</span></div>
+      <p class="eyebrow">ARSAM · SECURITY TRAINING</p>
+      <h1>خوش برگشتی<span class="accent">.</span></h1>
+      <p class="muted login-lead">وارد پنل تمرینی خودت شو و مسیر پیشرفتت رو ببین.</p>
+      <div class="lab-notice"><span class="pulse"></span><span>محیط آزمایشی · اطلاعات کاملاً ساختگی</span></div>
+      <form id="loginForm" class="stack-form">
+        <label for="username">نام کاربری</label>
+        <input id="username" name="username" autocomplete="username" placeholder="مثلاً ARSAM" required>
+        <label for="password">رمز عبور</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" placeholder="رمز عبور را وارد کن" required>
+        <div id="loginError" class="form-error" role="alert" hidden>نام کاربری یا رمز عبور درست نیست.</div>
+        <button class="btn btn-primary btn-wide" type="submit">ورود به پنل <span aria-hidden="true">←</span></button>
+      </form>
+      <div class="login-bottom"><span class="tiny-dot"></span> ساخته‌شده برای تمرین امن و بررسی کد</div>
+    </section>
+    <aside class="login-art">
+      <div class="orbital orbital-a"></div><div class="orbital orbital-b"></div>
+      <div class="art-chip chip-top"><span class="chip-icon">⌘</span> WEB SECURITY LAB</div>
+      <div class="code-window"><div class="window-controls"><i></i><i></i><i></i><span>exam-session.js</span></div><pre><span class="code-purple">const</span> session = {
+  <span class="code-blue">user</span>: <span class="code-green">"student"</span>,
+  <span class="code-blue">progress</span>: <span class="code-orange">84</span>,
+  <span class="code-blue">status</span>: <span class="code-green">"learning"</span>
+};
+
+<span class="code-purple">function</span> <span class="code-yellow">keepLearning</span>() {
+  <span class="code-purple">return</span> session.status;
+}</pre></div>
+      <div class="art-caption"><strong>یاد بگیر. آزمایش کن. امن‌تر بساز.</strong><span>یک محیط ساختگی برای تمرین مفاهیم امنیت وب</span></div>
+      <div class="art-chip chip-bottom"><span class="shield">◈</span> BUILT FOR LEARNING</div>
+    </aside>
+  </main>
+
+  <div id="appView" class="app-shell" hidden>
+    <aside class="sidebar glass">
+      <a class="brand-row" href="#dashboard" data-nav="dashboard"><span class="brand-mark small">A<span>/</span></span><span><strong>ARSAM <b>EXAM</b></strong><small>LEARNING CONSOLE</small></span></a>
+      <div class="side-label">فضای آموزشی</div>
+      <button class="side-link active" data-nav="dashboard"><span class="nav-icon">⌂</span> نمای کلی</button>
+      <button class="side-link" data-nav="exams"><span class="nav-icon">▤</span> آزمون‌ها <span id="examCount" class="mini-count">1</span></button>
+      <button class="side-link" data-nav="progress"><span class="nav-icon">↗</span> پیشرفت من</button>
+      <div class="sidebar-spacer"></div>
+      <div class="side-lab-card"><div class="side-lab-icon">✳</div><strong>حالت لابراتوار</strong><p>این پنل برای تمرین طراحی شده و به هیچ دیتابیس واقعی وصل نیست.</p><span class="status-line"><i></i> محیط محلی</span></div>
+      <button id="logoutBtn" class="side-link logout"><span class="nav-icon">↪</span> خروج از حساب</button>
+      <div class="sidebar-foot">ARSAM LAB <span>v1.0.0</span></div>
+    </aside>
+
+    <section class="main-area">
+      <header class="topbar">
+        <div class="crumbs"><span>فضای یادگیری</span><span class="crumb-sep">/</span><strong id="pageCrumb">نمای کلی</strong></div>
+        <div class="top-actions"><div class="top-status"><i></i> سیستم آماده است</div><button id="menuButton" class="kebab" aria-label="باز کردن منوی بیشتر" aria-expanded="false">•••</button><div id="menuDropdown" class="dropdown" hidden><button data-nav="exams">▤ آزمون‌ها</button><button data-nav="progress">↗ پیشرفت من</button><a class="admin-hidden-link" href="?mode=admin">⚙ پنل مدیریت</a><button id="menuLogout">خروج از حساب</button></div><div class="avatar">A</div></div>
+      </header>
+
+      <div class="content-wrap">
+        <section id="dashboardPage" class="page-view">
+          <div class="welcome-row"><div><p class="eyebrow">SUNDAY · LEARN SOMETHING NEW</p><h1>سلام، آرسام <span class="wave">✦</span></h1><p class="muted">هر آزمون یک فرصت تازه برای بهتر شدنه.</p></div><div class="welcome-date"><span class="date-icon">◷</span><div><small>وضعیت امروز</small><strong>آمادهٔ یادگیری</strong></div></div></div>
+          <div class="hero-card"><div class="hero-copy"><span class="hero-kicker">YOUR NEXT CHALLENGE</span><h2>دانشت رو به چالش بکش<span class="accent">.</span></h2><p>یک آزمون کوتاه انتخاب کن، نتیجه‌ات رو ببین و قدم بعدی رو پیدا کن.</p><button class="btn btn-light" data-nav="exams">دیدن آزمون‌ها <span>←</span></button></div><div class="hero-graphic"><div class="hero-ring ring-one"></div><div class="hero-ring ring-two"></div><div class="hero-core"><span>✦</span><b>LAB</b></div><div class="floating-stat stat-a"><span>✓</span><div><strong>تمرین هدفمند</strong><small>یک قدم در هر بار</small></div></div><div class="floating-stat stat-b"><span>↗</span><div><strong id="heroDone">0 آزمون</strong><small>تکمیل‌شده</small></div></div></div><div class="hero-decor decor-dots"></div></div>
+          <div class="section-heading"><div><h2>خلاصهٔ عملکرد</h2><p class="muted">نمایی از فعالیت‌های همین مرورگر</p></div><button class="text-button" data-nav="progress">جزئیات پیشرفت ←</button></div>
+          <div class="stats-grid"><article class="stat-card"><div class="stat-top"><span class="stat-icon purple">▤</span><span class="stat-trend">همهٔ آزمون‌ها</span></div><strong id="statTotal" class="stat-value">1</strong><span class="stat-label">آزمون در دسترس</span><div class="stat-line"><i style="width:72%"></i></div></article><article class="stat-card"><div class="stat-top"><span class="stat-icon mint">✓</span><span class="stat-trend">فعالیت تو</span></div><strong id="statCompleted" class="stat-value">0</strong><span class="stat-label">آزمون تکمیل‌شده</span><div class="stat-line mint-line"><i id="completedLine" style="width:4%"></i></div></article><article class="stat-card"><div class="stat-top"><span class="stat-icon amber">◎</span><span class="stat-trend">میانگین نمره</span></div><strong id="statAverage" class="stat-value">—</strong><span class="stat-label">از ۱۰۰ امتیاز</span><div class="stat-line amber-line"><i id="averageLine" style="width:4%"></i></div></article></div>
+          <div class="section-heading"><div><h2>پیشنهاد برای تو</h2><p class="muted">با یک آزمون کوچک شروع کن</p></div><span class="section-tag">پیشنهاد امروز</span></div>
+          <div id="featuredExam" class="exam-feature"></div>
+          <div class="bottom-note"><span>◈</span><p>یادآوری: نتایج این نمونه در حافظهٔ همین مرورگر ذخیره می‌شود؛ این نسخه سرور یا حساب واقعی ندارد.</p></div>
+        </section>
+
+        <section id="examsPage" class="page-view" hidden>
+          <div class="page-intro"><div><p class="eyebrow">ASSESSMENT LIBRARY</p><h1>آزمون‌ها</h1><p class="muted">آزمون موردنظرت رو انتخاب کن و میزان آمادگی‌ات رو بسنج.</p></div><div class="intro-symbol">▤</div></div>
+          <div class="filter-row"><span class="filter-pill active">همهٔ آزمون‌ها</span><span class="filter-result" id="examResultCount">1 آزمون</span></div>
+          <div id="examList" class="exam-grid"></div>
+          <div id="emptyExams" class="empty-state" hidden><span>▤</span><h3>هنوز آزمونی ساخته نشده</h3><p>بعداً دوباره سر بزن یا از پنل مدیریت یک آزمون آزمایشی بساز.</p></div>
+        </section>
+
+        <section id="examPage" class="page-view" hidden>
+          <button class="back-link" data-nav="exams">→ بازگشت به آزمون‌ها</button>
+          <div id="examRunContainer"></div>
+        </section>
+
+        <section id="resultPage" class="page-view" hidden>
+          <div id="resultContainer"></div>
+          <section class="analysis-panel"><div class="analysis-head"><div class="analysis-symbol">▶</div><div><p class="eyebrow">AFTER THE EXAM</p><h2>تحلیل آزمون</h2><p class="muted">ویدیوی آموزشی برای مرور نکات پس از پایان آزمون</p></div><span class="video-tag">VIDEO · 00:29</span></div><div class="video-frame"><video id="analysisVideo" controls controlsList="nodownload noplaybackrate" disablepictureinpicture preload="metadata" playsinline><source src="assets/analysis.mp4" type="video/mp4">مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.</video><div class="video-overlay-label"><span>ARSAM LEARNING LAB</span><b>تحلیل آزمون</b></div></div><div class="video-caption"><span class="lock-mark">▣</span><span>پخش آموزشی پس از آزمون</span><span class="caption-spacer"></span><span class="muted tiny">برای مرور دوباره نکات</span></div></section>
+          <div class="bottom-note"><span>◈</span><p>این ویدیو در این لابراتوار فقط از رابط کاربری مخفی شده است؛ فایل عمومی وب را نمی‌توان صرفاً با مخفی‌کردن دکمهٔ دانلود محرمانه کرد.</p></div>
+        </section>
+
+        <section id="progressPage" class="page-view" hidden>
+          <div class="page-intro"><div><p class="eyebrow">YOUR LEARNING JOURNEY</p><h1>پیشرفت من</h1><p class="muted">سوابق ثبت‌شده در همین مرورگر را ببین.</p></div><div class="intro-symbol progress-symbol">↗</div></div>
+          <div class="progress-overview"><div><span class="muted">میانگین نمره</span><strong id="progressAverage">—</strong><small>از ۱۰۰ امتیاز</small></div><div class="progress-divider"></div><div><span class="muted">تعداد آزمون‌ها</span><strong id="progressCount">0</strong><small>آزمون تکمیل‌شده</small></div><div class="progress-divider"></div><div><span class="muted">بهترین نتیجه</span><strong id="progressBest">—</strong><small>بهترین نمره</small></div></div>
+          <div class="section-heading"><div><h2>تاریخچهٔ آزمون‌ها</h2><p class="muted">جدیدترین نتیجه‌ها در بالا نمایش داده می‌شوند.</p></div></div><div id="historyList" class="history-list"></div><div id="emptyHistory" class="empty-state" hidden><span>↗</span><h3>هنوز نتیجه‌ای ثبت نشده</h3><p>بعد از حل اولین آزمون، کارنامه‌ات اینجا دیده می‌شود.</p><button class="btn btn-primary" data-nav="exams">شروع اولین آزمون</button></div>
+        </section>
+
+        <section id="adminPage" class="page-view" hidden>
+          <div class="page-intro"><div><p class="eyebrow">LAB CONTROL CENTER</p><h1>پنل مدیریت <span class="accent">.</span></h1><p class="muted">ساخت آزمون‌های تمرینی برای همین مرورگر</p></div><div class="intro-symbol admin-symbol">⚙</div></div>
+          <div class="admin-alert"><span>⚠</span><div><strong>پنل آزمایشگاهی</strong><p>این پنل به سرور وصل نیست. آزمون‌های ساخته‌شده فقط در حافظهٔ همین مرورگر ذخیره می‌شوند.</p></div></div>
+          <div class="admin-layout"><form id="createExamForm" class="admin-form glass"><div class="form-heading"><span class="stat-icon purple">＋</span><div><h2>ساخت آزمون جدید</h2><p class="muted">عنوان و سؤال‌ها را وارد کن.</p></div></div><label for="newExamTitle">عنوان آزمون</label><input id="newExamTitle" required maxlength="90" placeholder="مثلاً مبانی امنیت وب"><label for="newExamDescription">توضیحات کوتاه</label><textarea id="newExamDescription" rows="2" maxlength="220" placeholder="هدف این آزمون چیست؟"></textarea><div class="question-builder-head"><strong>سؤال‌ها</strong><button type="button" id="addQuestionBtn" class="text-button">＋ افزودن سؤال</button></div><div id="builderQuestions"></div><div id="adminError" class="form-error" hidden></div><button class="btn btn-primary btn-wide" type="submit">ساخت و انتشار آزمون <span>←</span></button></form><aside class="admin-side"><div class="admin-stat-card"><span>آزمون‌های ساخته‌شده</span><strong id="adminExamCount">1</strong><small>در مرورگر فعلی</small></div><div class="admin-help"><span class="help-icon">⌘</span><h3>راهنمای لابراتوار</h3><p>این پروژه برای یادگیری کنترل دسترسی، نگهداری امن پاسخ‌ها و محدودیت‌های فایل‌های سمت کاربر ساخته شده است.</p><span class="status-line"><i></i> دادهٔ آزمایشی</span></div></aside></div>
+          <div class="section-heading"><div><h2>آزمون‌های موجود</h2><p class="muted">نمونه و آزمون‌هایی که در همین مرورگر ساخته شده‌اند</p></div></div><div id="adminExamList" class="admin-exam-list"></div>
+        </section>
+      </div>
+      <footer class="app-footer"><span>© 2026 ARSAM EXAM LAB</span><span><i></i> فقط برای آموزش و آزمایش مجاز</span></footer>
+    </section>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <script src="app.js"></script>
+</body>
+</html>
